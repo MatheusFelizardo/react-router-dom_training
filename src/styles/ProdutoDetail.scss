@@ -1,0 +1,23 @@
+.ProdutoDetail {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 30px;
+  gap: 30px;
+  max-width: 80%;
+  margin: 0 auto;
+  .ProdutoDetail_Fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    img {
+      height: 350px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .ProdutoDetail_Text { 
+      h2 {
+          
+      }
+  }
+}

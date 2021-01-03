@@ -18,13 +18,16 @@ const Produtos = () => {
       {data &&
         data.map((produto) => {
           return (
-            <Link to={"/produto/" + produto.nome.toLowerCase()}>
+            <Link to={"/produto/" + produto.id}>
               <div className="ProductCard" key={produto.id}>
                 <h1>{produto.nome}</h1>
                 <img src={produto.fotos[0].src} alt={produto.fotos[0].titulo} />
-                <p>Preço: </p> <span>R$ {produto.preco}</span>
-                <br />
-                <p>Descrição: </p> <span>{produto.descricao}</span>
+                <div className="ProductCard_Text">
+                  <p>Preço: </p> <span>R$ {produto.preco}</span>
+                  <br />
+                  <br />
+                  <p>Descrição: </p> <span>{produto.descricao}</span>
+                </div>
               </div>
             </Link>
           );

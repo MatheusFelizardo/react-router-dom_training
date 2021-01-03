@@ -8,8 +8,6 @@ const ProdutoDetail = () => {
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(null);
 
-  id = id.replace("â", "a");
-
   React.useEffect(() => {
     async function consumeAPI() {
       try {
@@ -35,16 +33,20 @@ const ProdutoDetail = () => {
   if (produto === null) return null;
 
   return (
-    <>
-      {produto.fotos.map((foto) => {
-        return <img src={foto.src} alt="" />;
-      })}
+    <section className="ProdutoDetail">
+      <div className="ProdutoDetail_Fotos">
+        {produto.fotos.map((foto) => {
+          return <img src={foto.src} alt="" />;
+        })}
+      </div>
+      <div className="ProdutoDetail_Text">
+        <h2>{produto.nome}</h2>
 
-      <h2>{produto.nome}</h2>
-
-      <h2>R${produto.preco}</h2>
-      <h2>{produto.descricao}</h2>
-    </>
+        <span>Valor: R${produto.preco}</span>
+        <p>Descrição do Produto:</p>
+        <span>{produto.descricao}</span>
+      </div>
+    </section>
   );
 };
 
