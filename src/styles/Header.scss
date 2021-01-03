@@ -1,0 +1,18 @@
+.HeaderNav {
+  margin: 40px 0;
+  display: flex;
+  gap: 10px;
+  .btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(to left, #fd746c, #ff9068);
+    &:hover {
+      background: linear-gradient(to right, #fd746c, #ff9068);
+    }
+  }
+}
